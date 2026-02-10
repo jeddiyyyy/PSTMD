@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "config/config.php";
-require_once "php/login.php";
+require_once "assets/php/login.php";
 ?>
 
 
@@ -18,7 +18,7 @@ require_once "php/login.php";
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <link rel="icon" href="assets/img/pstmdlogo.png" type="image/x-icon">
+    <link rel="icon" href="assets/icon/PSTMD.png" type="image/x-icon">
     <script src="assets/js/sweetalert2/sweetalert2.all.min.js"></script>
 
 </head>

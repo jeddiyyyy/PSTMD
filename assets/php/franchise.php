@@ -14,33 +14,45 @@ if (!isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TPRS - Franchise</title>
-    <link rel="icon" href="../assets/icon/PSTMD.png" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/cssmain/franchise.css">
+    <link rel="icon" href="../icon/PSTMD.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/cssmain/franchise.css">
 </head>
 <body>
 
 <header>
     <div class="header-logo">
-        <img src="../assets/img/caloocanlogo.png" alt="Caloocan Logo">
-        <img src="../assets/img/AMLOGO.png" alt="Mayor Along Logo">
+        <img src="../img/caloocanlogo.png" alt="Caloocan Logo">
+        <img src="../img/AMLOGO.png" alt="Mayor Along Logo">
     </div>
 
     <div class="header-title">
+        <h1>Public Safety and Traffic Management Department</h1>
         <h2>Tricycle and Pedicab Regulatory Services</h2>
-        <h1>Franchise Management</h1>
     </div>
     <div class="header-logo">
-        <img src="../assets/icon/PSTMD.png" alt="PSTMD Logo">
-        <img src="../assets/icon/itdologo.png" alt="ITDO Logo">
+        <img src="../icon/PSTMD.png" alt="PSTMD Logo">
+        <img src="../icon/itdologo.png" alt="ITDO Logo">
     </div>
 </header>
 
 <div class="form-container">
+    <nav class="top-navbar">
+        <button class="nav-item active" onclick="window.location.href='franchise.php'">
+            Franchise
+        </button>
+        <button class="nav-item" onclick="window.location.href='billing.php'">
+            Billing
+        </button>
+        <button class="nav-item" onclick="window.location.href='permits.php'">
+            Permits
+        </button>
+    </nav>
+    <div class="form-fields">
+    <!-- Rest of your form content -->
      <div class="form-fields">
-       
     <div class="logout-container">
         <span class="username-display">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
-        <button class="btn-logout" onclick="window.location.href='../logout.php'">Logout</button>
+        <button class="btn-logout" onclick="window.location.href='logout.php'">Logout</button>
     </div>
 
 
@@ -51,7 +63,7 @@ if (!isset($_SESSION['username'])) {
 
         <div class="form-fields">
             <div class="form-section">
-                <span class="section-title">Case Information</span>
+                <span class="section-title">CASE INFORMATION</span>
                 <div class="form-row">
                     <div class="form-group">
                         <label>Case Number</label>
@@ -91,7 +103,7 @@ if (!isset($_SESSION['username'])) {
     </div>
 
     <div class="form-section">
-        <span class="section-title">Location Details</span>
+        <span class="section-title">LOCATION DETAILS</span>
         <div class="form-row">
             <div class="form-group">
                 <label>Address</label>
@@ -109,7 +121,7 @@ if (!isset($_SESSION['username'])) {
     </div>
 
     <div class="form-section">
-        <span class="section-title">Vehicle Details</span>
+        <span class="section-title">TODA DETAILS</span>
         <div class="form-row">
             <div class="form-group">
                 <label>Type</label>
@@ -181,23 +193,11 @@ if (!isset($_SESSION['username'])) {
             <button class="btn-delete"id="franchisedelete">Delete</button>
             <button class="btn-print"id="franchiseprint">Print</button>
         </div>
-   
     </div>
-    <div class="button-group">
-            <button class="btn-nav" onclick="window.location.href='billing.php'">Billing </button>
-            <button class="btn-nav" onclick="window.location.href='permits.php'">Permits</button>
     </div>
+</div>
 
-    <div id="modalContainer"></div>
-    <script>
-document.getElementById("franchisencode").addEventListener("click", () => {
-    fetch("franchisencode.php")
-        .then(res => res.text())
-        .then(html => {
-            document.getElementById("modalContainer").innerHTML = html;
-        });
-});
-</script>
+
 
 </body>
 </html>

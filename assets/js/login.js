@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             timer: 1500,
             showConfirmButton: false
         }).then(() => {
-            window.location.href = "php/franchise.php";
+            window.location.href = "assets/php/franchise.php";
         });
 
     } else {
