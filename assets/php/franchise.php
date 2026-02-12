@@ -52,7 +52,7 @@ if (!isset($_SESSION['username'])) {
      <div class="form-fields">
     <div class="logout-container">
         <span class="username-display">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
-        <button class="btn-logout" onclick="window.location.href='logout.php'">Logout</button>
+        <button class="btn-logout" id="Logoutbtn">Logout</button>
     </div>
 
 
@@ -67,21 +67,17 @@ if (!isset($_SESSION['username'])) {
                 <div class="form-row">
                     <div class="form-group">
                         <label>Case Number</label>
-                        <input type="text" id="casenumber" placeholder="-">
+                        <input type="text" id="casenumber" >
                     </div>
                     <div class="form-group">
                         <label>Old Case Number</label>
-                        <input type="text" id="oldcasenumber" placeholder="-">
+                        <input type="text" id="oldcasenumber" >
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>Conductor Name</label>
-                        <input type="text" id="conductname" placeholder="-">
-                    </div>
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" id="altername" placeholder="-">
+                        <input type="text" id="conductname" >
                     </div>
                 </div>
                  <div class="form-row">
@@ -95,7 +91,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
                     <div class="form-group">
                         <label>Status</label>
-                        <input type="text" id="status" placeholder="Active">
+                        <input type="text" id="status" >
                     </div>
                 </div>
             </div>
@@ -107,77 +103,93 @@ if (!isset($_SESSION['username'])) {
         <div class="form-row">
             <div class="form-group">
                 <label>Address</label>
-                <input type="text" id="address" placeholder="-">
+                <input type="text" id="address" >
             </div>
             <div class="form-group">
                 <label>Barangay</label>
-                <input type="text" id="barangay" placeholder="-">
+                <input type="text" id="barangay" >
             </div>
             <div class="form-group">
                 <label>District</label>
-                <input type="text" id="district" placeholder="-">
+                <input type="text" id="district" >
             </div>
         </div>
     </div>
 
     <div class="form-section">
-        <span class="section-title">TODA DETAILS</span>
+        <span class="section-title">TODA CLASSIFICATION</span>
         <div class="form-row">
             <div class="form-group">
                 <label>Type</label>
-                <input type="text" id="type" placeholder="-">
+                <select>
+                    <option value selected ="selected">Select Type</option>
+                    <option value="tricycle">Tricycle</option>
+                    <option value="pedicab">Pedicab</option>
+                </select>
             </div>
             <div class="form-group">
                 <label>Class</label>
-                <input type="text" id="class" placeholder="-">
+                 <select>
+                    <option value selected ="selected">Select Class</option>
+                    <option value="tricycle">P</option>
+                    <option value="pedicab">Pu</option>
+                    <option value="pedicab">Fo</option>
+                </select>
             </div>
             <div class="form-group">
                 <label>Mode</label>
-                <input type="text" id="mode" placeholder="-">
+                <select>
+                    <option value selected ="selected">Select Mode</option>
+                    <option value="tricycle">Private</option>
+                    <option value="pedicab">Public</option>
+                    <option value="pedicab">For Renewal</option>
+                    <option value="pedicab">For Supervision</option>
+                    <option value="pedicab">For Hire</option>
+                </select>
             </div>
              <div class="form-group">
                 <label>Make</label>
-                <input type="text" id="make" placeholder="-">
+                <input type="text" id="make" >
             </div>
         </div>
             <div class="form-row">
             <div class="form-group">
                 <label>Motor Number</label>
-                <input type="text" id="motornum" placeholder="-">
+                <input type="text" id="motornum" >
             </div>
             <div class="form-group">
                 <label>Plate Number</label>
-                <input type="text" id="platenum" placeholder="-">
+                <input type="text" id="platenum" >
             </div>
             <div class="form-group">
                 <label>Chassis Number</label>
-                <input type="text" id="chassisnum" placeholder="-">
+                <input type="text" id="chassisnum">
             </div>
              <div class="form-group">
                 <label>Body Number</label>
-                <input type="text" id="bodynum" placeholder="-">
+                <input type="text" id="bodynum" >
             </div>
              <div class="form-group">
                 <label>Color Scheme</label>
-                <input type="text" id="colorscheme" placeholder="-">
+                <input type="text" id="colorscheme" >
             </div>
         </div>
     </div>
 
     <div class="form-section">
-        <span class="section-title">Route Information</span>
+        <span class="section-title">ROUTE INFORMATION</span>
         <div class="form-row">
             <div class="form-group">
                 <label>Toda</label>
-                <input type="text" id="toda" placeholder="-">
+                <input type="text" id="toda" >
             </div>
             <div class="form-group">
                 <label>Route</label>
-                <input type="text" id="route" placeholder="-">
+                <input type="text" id="route" >
             </div>
             <div class="form-group">
                 <label>Remarks</label>
-                <input type="text" id="remarks" placeholder="-">
+                <input type="text" id="remarks" >
             </div>
         </div>
     </div>
@@ -196,8 +208,10 @@ if (!isset($_SESSION['username'])) {
     </div>
     </div>
 </div>
-
-
+</script>
+<script src="../js/jquery-4.0.0.min.js"></script>
+<script src="../js/sweetalert2/sweetalert2.all.min.js"></script>
+<script src="../js/ajax/logindex.js"></script>
 
 </body>
 </html>

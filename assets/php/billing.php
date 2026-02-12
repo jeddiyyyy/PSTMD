@@ -14,7 +14,7 @@ if (!isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TPRS - Billings</title>
-    <link rel="icon" href="../assets/icon/PSTMD.png" type="image/x-icon">
+    <link rel="icon" href="../icon/PSTMD.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/cssmain/billing.css">
 </head>
 <body>
@@ -48,21 +48,21 @@ if (!isset($_SESSION['username'])) {
     </nav>
 <div class="logout-container">
         <span class="username-display">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
-        <button class="btn-logout" onclick="window.location.href='logout.php'">Logout</button>
+        <button class="btn-logout" id="Logoutbtn">Logout</button>
     </div>
     <div class="form-section">
-        <span class="section-title">Billing Information</span>
+        <span class="section-title">BILLING INFORMATION</span>
         <div class="form-row">
             <div class="form-group">
                 <label>Bill Number</label>
                 <input type="text" id="billnumber" placeholder="-">
             </div>
             <div class="form-group">
-                <label>Case No</label>
+                <label>Case Number</label>
                 <input type="text" id="caseno" placeholder="-">
             </div>
             <div class="form-group">
-                <label>Old Case No</label>
+                <label>Old Case Number</label>
                 <input type="text" id="oldcaseno" placeholder="-">
             </div>
               <div class="form-group">
@@ -81,7 +81,7 @@ if (!isset($_SESSION['username'])) {
     </div>
 
     <div class="form-section">
-        <span class="section-title">Vehicle Details</span>
+        <span class="section-title">MOTOR CLASSIFICATION</span>
         <div class="form-row">
             <div class="form-group">
                 <label>Type</label>
@@ -133,7 +133,7 @@ if (!isset($_SESSION['username'])) {
     </div>
 
     <div class="form-section">
-        <span class="section-title">Fee Breakdown</span>
+        <span class="section-title">FEES BREAKDOWN</span>
         <div class="fees-grid">
             <div class="fee-item">
                 <label>Mayor Permit Fee</label>

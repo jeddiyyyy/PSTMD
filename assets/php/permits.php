@@ -14,7 +14,7 @@ if (!isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TPRS - Permits</title>
-    <link rel="icon" href="../assets/icon/PSTMD.png" type="image/x-icon">
+    <link rel="icon" href="../icon/PSTMD.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/cssmain/permits.css">
 </head>
 <body>
@@ -50,10 +50,10 @@ if (!isset($_SESSION['username'])) {
 
     <div class="logout-container">
         <span class="username-display">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
-        <button class="btn-logout" onclick="window.location.href='logout.php'">Logout</button>
+        <button class="btn-logout" id="Logoutbtn">Logout</button>
     </div>
     <div class="form-section">
-        <span class="section-title">Permit Information</span>
+        <span class="section-title">PERMIT INFORMATION</span>
         <div class="form-row">
             <div class="form-group">
                 <label>Control Number</label>
@@ -75,7 +75,7 @@ if (!isset($_SESSION['username'])) {
     </div>
 
     <div class="form-section">
-        <span class="section-title">Vehicle Details</span>
+        <span class="section-title">TODA CLASSIFICATION</span>
         <div class="form-row">
             <div class="form-group">
                 <label>Type</label>
@@ -127,7 +127,7 @@ if (!isset($_SESSION['username'])) {
     </div>
 
     <div class="form-section">
-        <span class="section-title">Permit Fees Breakdown</span>
+        <span class="section-title">FEES BREAKDOWN</span>
         <div class="fees-grid">
             <div class="fee-item">
                 <label>Mayor Permit Fee</label>
@@ -174,6 +174,28 @@ if (!isset($_SESSION['username'])) {
             </div>
         </div>
     </div>
+
+     <div class="form-section">
+                <div class="section-title">O.R. DETAILS</div>
+                <div class="fees-grid">
+                    <div class="form-group">
+                        <label>O.R. Number</label>
+                        <input type="text" id="ornumber" >
+                    </div>
+                    <div class="form-group">
+                        <label>O.R. Date</label>
+                        <input type="date" id="ordate">
+                    </div>
+                    <div class="form-group">
+                        <label>MACHNO</label>
+                        <input type="text" id="machno" >
+                    </div>
+                    <div class="form-group">
+                        <label>Collector</label>
+                        <input type="text" id="collector">
+                    </div>
+                </div>
+            </div>
 
    <div class="button-section">
         <div class="button-group">

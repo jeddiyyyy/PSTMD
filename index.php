@@ -1,7 +1,6 @@
 <?php
 session_start();
 include "config/config.php";
-require_once "assets/php/login.php";
 ?>
 
 
@@ -42,7 +41,7 @@ require_once "assets/php/login.php";
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <div class="input-wrapper">
-                        <input type="text" id="username" name="username" placeholder="Enter Username" required>
+                        <input type="text" id="username" name="username" required>
                     </div>
                     <span class="error-message" id="emailError"></span>
                 </div>
@@ -50,7 +49,7 @@ require_once "assets/php/login.php";
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <div class="input-wrapper">
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <input type="password" id="password" name="password" required>
                     </div>
                      <span class="error-message" id="passwordError"></span>
                 </div>
@@ -63,18 +62,9 @@ require_once "assets/php/login.php";
         <footer class="footer-text">JARRELL DC - ITDO Caloocan &copy; 2026</footer>
     </div>
 
-    <script src="assets/js/sweetalert2/sweetalert2.all.min.js"></script>
-
-<?php if (!empty($loginStatus)): ?>
-<script>
-    const LOGIN_STATUS = "<?php echo $loginStatus; ?>";
-    const LOGIN_MESSAGE = "<?php echo $loginMessage ?? ''; ?>";
-</script>
-<script src="assets/js/login.js"></script>
-<?php endif; ?>
-
-
-
+<script src="assets/js/sweetalert2/sweetalert2.all.min.js"></script>
+<script src="assets/js/jquery-4.0.0.min.js"></script>
+<script src="assets/js/ajax/logindex.js"></script>
 
     </body>
 </html>

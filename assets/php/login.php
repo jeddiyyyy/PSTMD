@@ -1,9 +1,13 @@
 <?php
+session_start();
+include "../../config/config.php";
 
-include "config/config.php";
+header('Content-Type: application/json');
 
-$loginStatus  = "";
-$loginMessage = "";
+$response = [
+    "status" => "error",
+    "message" => ""
+];
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -20,15 +24,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if (password_verify($password, $row['password'])) {
             $_SESSION['username'] = $username;
-            $loginStatus = "success";
+
+            $response["status"] = "success";
+            $response["message"] = "Login successful!";
+            $response["redirect"] = "assets/php/franchise.php";
+
         } else {
-            $loginStatus  = "error";
-            $loginMessage = "Incorrect password";
+            $response["message"] = "Incorrect password";
         }
     } else {
-        $loginStatus  = "error";
-        $loginMessage = "User not found";
+        $response["message"] = "User not found";
     }
 
     $stmt->close();
 }
+
+echo json_encode($response);
+exit;
