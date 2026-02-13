@@ -208,6 +208,10 @@ if (!isset($_SESSION['username'])) {
     </div>
 </div>
 
+<script src="../js/jquery-4.0.0.min.js"></script>
+<script src="../js/sweetalert2/sweetalert2.all.min.js"></script>
+<script src="../js/loginlogout.js"></script>
+
 
 </body>
 </html>

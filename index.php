@@ -64,7 +64,7 @@ include "config/config.php";
 
 <script src="assets/js/sweetalert2/sweetalert2.all.min.js"></script>
 <script src="assets/js/jquery-4.0.0.min.js"></script>
-<script src="assets/js/ajax/logindex.js"></script>
+<script src="assets/js/loginlogout.js"></script>
 
     </body>
 </html>

@@ -211,7 +211,7 @@ if (!isset($_SESSION['username'])) {
 </script>
 <script src="../js/jquery-4.0.0.min.js"></script>
 <script src="../js/sweetalert2/sweetalert2.all.min.js"></script>
-<script src="../js/ajax/logindex.js"></script>
+<script src="../js/loginlogout.js"></script>
 
 </body>
 </html>

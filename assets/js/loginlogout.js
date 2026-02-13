@@ -78,7 +78,7 @@ $(document).ready(function () {
 
                 $.ajax({
                     type: "POST",
-                    url: "assets/php/logout.php",
+                    url: "../php/logout.php",
                     dataType: "json",
 
                     success: function (response) {
@@ -92,7 +92,7 @@ $(document).ready(function () {
                                 timer: 1200,
                                 showConfirmButton: false
                             }).then(() => {
-                                window.location.href = response.redirect;
+                                window.location.href = "../../index.php";
                             });
 
                         } else {
